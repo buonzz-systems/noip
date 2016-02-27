@@ -1,0 +1,24 @@
+{
+    "name": "buonzz/noip",
+    "description": "PHP Client for Integrating to NoIP.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Darwin Biler",
+            "email": "buonzz@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+		"php": ">=5.4.*"
+    },
+	"require-dev": {
+        "phpdocumentor/phpdocumentor": "2.*",
+		"phpunit/phpunit": "3.7.*"
+    },
+	"autoload": {
+        "psr-4": {
+            "Buonzz\\NoIP\\": "src/"
+        }
+    }
+}
