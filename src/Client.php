@@ -44,8 +44,6 @@ class Client{
 
     $client = new GClient(['headers' => ['User-Agent' => 'Buonzz Update Client PHP/v1.0 buonzz@gmail.com']]);
     
-    $output = "";
-    
     try{
       
       $response = $client->request('GET', $uri);
@@ -55,7 +53,7 @@ class Client{
       return $reason;  
     }
     catch (ClientException $e) {
-        return $e->getResponse();
+        return $e->getMessage();
     }
 
   } /* update method */

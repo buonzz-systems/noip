@@ -2,6 +2,7 @@
     "name": "buonzz/noip",
     "description": "PHP Client for Integrating to NoIP.com",
     "license": "MIT",
+    "keywords": ["ddns", "dynamic ip", "automatic ip renewal", "domains", "custom domain"],
     "authors": [
         {
             "name": "Darwin Biler",
@@ -12,10 +13,10 @@
     "require": {
 		"php": ">=5.5",
         "guzzlehttp/guzzle": "~6.0",
-        "vlucas/phpdotenv": "^2.2"
+        "vlucas/phpdotenv": "^2.2",
+        "symfony/console": "^3.0"
     },
 	"require-dev": {
-        "phpdocumentor/phpdocumentor": "2.*",
 		"phpunit/phpunit": "3.7.*"
     },
 	"autoload": {
