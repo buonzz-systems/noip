@@ -51,7 +51,7 @@ if($result == 'OK')
 You can install it globally in your machine:
 
 ```
-composer global require 'buonzz/noip'
+composer global require buonzz/noip
 ```
 
 Simply add this directory to your PATH in your ~/.bash_profile (or ~/.bashrc) like this:
@@ -65,12 +65,11 @@ Set the .env file in
 noip/bin folder
 
 ```
-vi noip/bin.env
+vi noip/bin/.env
 ```
 
 Now you are ready to run the script
 
 ```
 noip_php client:update
-```
 ```
