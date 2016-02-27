@@ -19,9 +19,9 @@ Instantiate Client and set IP
 ```
 use Buonzz\NoIP\Client;
 
-$client = new Buonzz\NoIP\Client('username', 'password');
+$client = new Buonzz\NoIP\Client();
 
-$result = $client->update("yourhost.ddns.net", "x.x.x.x");
+$result = $client->update("1.1.1.1");
 
 if($result == 'OK')
   // the ddns host is successfully updated

@@ -12,8 +12,8 @@ class ClientTest extends PHPUnit_Framework_TestCase{
   }
 
   public function testUpdate(){
-  	$client = new Buonzz\NoIP\Client('XXXX', 'XXXX');
-  	$this->assertEquals($client->update("XXXX", "XXXX"), 'OK');
+  	$client = new Buonzz\NoIP\Client();
+  	$this->assertEquals($client->update("112.206.26.201"), 'OK');
   	unset($var);	
   }
   

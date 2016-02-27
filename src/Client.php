@@ -5,6 +5,8 @@ use Psr\Http\Message\ResponseInterface;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Exception\ClientException;
 
+use Dotenv\Dotenv;
+
 class Client{
   
   private $use_https;
@@ -13,10 +15,10 @@ class Client{
 
   private $api_url;
 
-  public function __construct($username, $password, $use_https = true){
+  public function __construct($use_https = true){
   
-    $this->username = $username;
-    $this->password = $password;
+    $this->username = getenv('NOIP_USERNAME');
+    $this->password = getenv('NOIP_PASSWORD');
     $this->use_https = $use_https;
     
     if($use_https)
@@ -26,10 +28,18 @@ class Client{
 
     $this->api_url .= "://$this->username:$this->password@dynupdate.no-ip.com/nic/update";  
   
+    $dotenv = new Dotenv(getcwd());
+    $dotenv->load();
+  
   }
 
-  public function update($hostname, $ip){
+  public function update($ip, $phostname = null){
     
+    if(is_null($phostname))
+      $hostname = getenv('NOIP_HOST');
+    else
+      $hostname = $phostname;
+
     $uri = $this ->api_url ."?hostname=" . $hostname . "&myip=" . $ip;
 
     $client = new GClient(['headers' => ['User-Agent' => 'Buonzz Update Client PHP/v1.0 buonzz@gmail.com']]);
