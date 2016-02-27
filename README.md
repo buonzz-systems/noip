@@ -13,6 +13,21 @@ Install via Composer
 composer require buonzz/noip
 ```
 
+Create the configuration file with filename .env
+```
+vi .env
+```
+
+The config file should contain this variables that you need to set
+
+* NOIP_HOST - is your NoIP Hostname, (e.g. myhostname.ddns.net )
+* NOIP_USERNAME - your account username
+* NOIP_PASSWORD - your password
+
+
+Remember to not commit the .env file to your git repository! These variables is automatically loaded by app as environment variable. This is a security feature so that your credentials is not hardcoded in your application source codes.
+
+
 Instantiate Client and set IP
 
 
