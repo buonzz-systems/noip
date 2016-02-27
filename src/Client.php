@@ -7,16 +7,14 @@ use GuzzleHttp\Exception\ClientException;
 
 class Client{
   
-  private $api_host;
   private $use_https;
   private $username;
   private $password;
 
   private $api_url;
 
-  public function __construct($host, $username, $password, $use_https = true){
+  public function __construct($username, $password, $use_https = true){
   
-    $this->api_host = $host;
     $this->username = $username;
     $this->password = $password;
     $this->use_https = $use_https;
