@@ -17,6 +17,9 @@ class Client{
 
   public function __construct($use_https = true){
   
+    $dotenv = new Dotenv(getcwd());
+    $dotenv->load();
+    
     $this->username = getenv('NOIP_USERNAME');
     $this->password = getenv('NOIP_PASSWORD');
     $this->use_https = $use_https;
@@ -27,9 +30,6 @@ class Client{
       $this->api_url = "http";
 
     $this->api_url .= "://$this->username:$this->password@dynupdate.no-ip.com/nic/update";  
-  
-    $dotenv = new Dotenv(getcwd());
-    $dotenv->load();
   
   }
 
