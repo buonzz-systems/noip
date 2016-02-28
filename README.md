@@ -54,18 +54,25 @@ You can install it globally in your machine:
 composer global require buonzz/noip
 ```
 
-Simply add this directory to your PATH in your ~/.bash_profile (or ~/.bashrc) like this:
+Simply add this directory to your PATH in your ~/.bash_profile (and/or ~/.bashrc) like this:
 
 ```
 export PATH=~/.composer/vendor/bin:$PATH
 ```
 
-Set the .env file in 
-
-~/.composer/vendor/bin folder
+load the current config
 
 ```
-vi noip/bin/.env
+source ~/.bash_profile
+```
+
+
+Set the .env file in 
+
+~/.env folder
+
+```
+vi ~/.env
 ```
 
 (look at the above section for configuring projects to know what vars is required )
