@@ -62,11 +62,13 @@ export PATH=~/.composer/vendor/bin:$PATH
 
 Set the .env file in 
 
-noip/bin folder
+~/.composer/vendor/bin folder
 
 ```
 vi noip/bin/.env
 ```
+
+(look at the above section for configuring projects to know what vars is required )
 
 Now you are ready to run the script
 
