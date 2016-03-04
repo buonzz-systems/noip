@@ -82,3 +82,12 @@ Now you are ready to run the script
 ```
 noip_php client:update
 ```
+
+### Phar Build
+
+[https://gist.github.com/buonzz/07193b92ee10e9eaac19](Install) first box in your Homestead.
+
+```
+box build
+```
+```
