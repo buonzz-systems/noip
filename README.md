@@ -1,12 +1,36 @@
 PHP Client for Integrating to NoIP.com
 ======================================
 
-Library to update the DDNS hostname to a specific IP.
+Client to update the DDNS hostname to a specific IP.
 
 see [http://www.noip.com/integrate/request](http://www.noip.com/integrate/request)
 
 ## Installation
 
+
+
+### Install as globally executable script
+
+```
+wget https://github.com/buonzz-systems/noip/raw/master/dist/noip_php.phar
+sudo mv noip_php.phar  /usr/local/bin/noip_php
+chmod +x /usr/local/bin/noip_php
+noip_php -V
+```
+
+Place a configuration file named ".env" on  home folder with the following contents:
+
+```
+NOIP_HOST=yourhost.ddns.net
+NOIP_USERNAME=yourusername
+NOIP_PASSWORD=yourpassword
+```
+
+### Running as cron job every 4 hours
+
+```
+0 */4 * * * cd ~;/usr/bin/noip_php client:update
+```
 
 
 ### Install via Composer in a Project
