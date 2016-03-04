@@ -29,7 +29,7 @@ NOIP_PASSWORD=yourpassword
 ### Running as cron job every 4 hours
 
 ```
-0 */4 * * * cd ~;/usr/bin/noip_php client:update
+0 */4 * * * cd ~;/usr/local/bin/noip_php client:update
 ```
 
 
